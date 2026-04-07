@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<style>
+.circle {
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 50%;
+    margin: 400px auto;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* жовте кільце */
+.circle::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background: yellow;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* синє кільце */
+.circle::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: blue;
+    border-radius: 50%;
+    z-index: -2;
+}
+
+body {
+    background: #ccc;
+}
+</style>
+</head>
+<body>
+
+<div class="circle">UA</div>
+
+</body>
+</html>
